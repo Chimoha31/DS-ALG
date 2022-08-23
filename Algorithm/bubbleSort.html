@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Sort (Ascending)</title>
+  </head>
+  <body>
+    <!-- ---------------------------------------------------------------------- -->
+    <script>
+      // 昇順
+      const bubbleSort = [10, 30, 20, 40, 70, 50, 60];
+
+      function sort(array) {
+        for (let i = 0; i < array.length; i++) {
+          for (let j = 0; j < array.length - i; j++) {
+            if (array[j] > array[j + 1]) {
+              [array[j], array[j + 1]] = [array[j + 1], array[j]];
+            }
+          }
+        }
+        const minmax = { min: array[0], max: array[array.length - 1] };
+        return minmax;
+        // return array
+      }
+
+      console.log(sort(bubbleSort));
+    </script>
+    <!-- ---------------------------------------------------------------------- -->
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Sort (Descending)</title>
+  </head>
+  <body>
+    <!-- ---------------------------------------------------------------------- -->
+    <script>
+      const bubbleSort = [10, 30, 20, 40, 70, 50, 60];
+
+      // function sort(array) {
+      //   for (let i = 0; i < array.length; i++) {
+      //     for (let j = 0; j < array.length - i; j++) {
+      //       if (array[j] < array[j + 1]) {
+      //         [array[j], array[j + 1]] = [array[j + 1], array[j]];
+      //       }
+      //     }
+      //   }
+      //   return array;
+      // }
+      
+      // 降順
+      function sort(array) {
+        for (let i = bubbleSort.length; i > 0; i--) {
+          for (let j = bubbleSort.length; j > bubbleSort.length - i; j--) {
+            if(array[j] > array[j-1]){
+              [array[j], array[j-1]] = [array[j-1], array[j]]
+            }
+          }
+        }
+        return array;
+      }
+
+      console.log(sort(bubbleSort));
+    </script>
+
+    <!-- ---------------------------------------------------------------------- -->
+  </body>
+</html>
