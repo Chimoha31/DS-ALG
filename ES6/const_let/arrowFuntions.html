@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow functions</title>
+  </head>
+  <body>
+    <script>
+      // old
+      const square = function (number) {
+        return number * number;
+      };
+      console.log(square(3));
+
+      // new
+      const square02 = (number) => number * number;
+      console.log(square(4));
+
+      //----------------------------------------------------
+      const jobs = [
+        { id: 1, isActive: true },
+        { id: 2, isActive: true },
+        { id: 3, isActive: false },
+      ];
+
+      const activeJob = jobs.filter((job) => job.isActive === true);
+      console.log(activeJob);
+    </script>
+  </body>
+</html>

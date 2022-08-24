@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>const / let</title>
+</head>
+<body>
+  <script>
+    // var --> function
+    // let --> block
+    function test() {
+      for(var i = 0; i < 5; i++) {
+        console.log(i)
+      }
+      console.log(i)
+    }
+    test() //output: 01234, 5
+
+    function test02() {
+      for(let i = 0; i < 5; i++) {
+        console.log(i)
+      }
+      console.log(i) //let = blockレベル  ｀｀｀｀なのでここは出力されない
+    }
+    test02() //output: 01234
+
+  </script>
+</body>
+</html>

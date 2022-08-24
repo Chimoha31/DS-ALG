@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this Keyword</title>
+</head>
+<body>
+  <script>
+    const person = {
+      name: "Teddy",
+      walk(){
+        console.log(this); //thisは呼ばれたところのcurrent objectの内容を指す
+      }
+    }
+    person.walk(); // output: {namd: "Teddy", walk: f}
+
+    // const walk = person.walk;
+    // walk(); //undefined or //strict modeではないときはwindow{} objectが返される = undefined
+
+    //bind (binding this) 上記undefinedを解決するには------------------------------------- 
+    const walk = person.walk.bind(person);
+    walk();
+
+
+  </script>
+</body>
+</html>
