@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
-    
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Pizza {
+        constructor(pizzaType) {
+          this.type = pizzaType;
+          this.size = "small";
+          this.crust = "original";
+          this.toppings = [];
+        }
+        setCrust(pizzaCrust) {
+          this.crust = pizzaCrust;
+        }
+        getCrust() {
+          return this.crust;
+        }
+        setToppings(topping) {
+          this.toppings.push(topping)
+        }
+        getToppings(){
+          return this.toppings;
+        }
+        bake() {
+          console.log(
+            `Baking a ${this.size} ${this.type} ${this.crust} crust pizza. Toppings are ${this.toppings}`
+          );
+        }
+      }
+
+      const myPizza = new Pizza("pineapple");
+      myPizza.setCrust("thin");
+      myPizza.setToppings("sausage")
+      myPizza.setToppings("olives")
+      myPizza.bake();
+      console.log(myPizza.getCrust());
+      console.log(myPizza.getToppings())
+
+      // inheritant--------------------------------------------------------------------------
+      
+
+    </script>
+  </body>
 </html>
